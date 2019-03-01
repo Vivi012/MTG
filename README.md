@@ -326,7 +326,7 @@ manager = new MediationInterstitialHandler();
 示例代码：
 
 ```java
-Map<String,Object> paramsMap = new HashMap<>();
+	Map<String,Object> paramsMap = new HashMap<>();
         //IronSource
         AdSource adSource = new AdSource();
         Map<String,Object> ironsourceMap = new HashMap<>();
@@ -538,7 +538,7 @@ ironsource要求需要调用该方法。
         AdSource mtgAdSource = new AdSource();
         map.put(CommonConst.KEY_APPID, "your AppId");
         map.put(CommonConst.KEY_APPKEY, "your AppKey");
-         map.put(CommonConst.KEY_REWARDUNITID, "your unitId");
+        map.put(CommonConst.KEY_REWARDUNITID, "your unitId");
         map.put(CommonConst.KEY_USERID, "your userId");////userId在服务器回调中用到
         map.put(CommonConst.KEY_REWARDID, "your rewardId");//rewardId默认可以传1
         map.put(CommonConst.KEY_MUTE, false);
@@ -627,7 +627,7 @@ ironsource要求需要调用该方法。
 ironsource要求需要调用该方法。
 
 ```java
-   	 lifecycleListener = manager.getLifecycleListener();
+   lifecycleListener = manager.getLifecycleListener();
 ```
 在Activity的生命周期中调用其中方法。     
        
