@@ -348,58 +348,66 @@ Map<String,Object> paramsMap = new HashMap<>();
         mtgAdSource.setTimeOut(10000);
         paramsMap.put("1",mtgAdSource);
         
- 	     /**
+ 	 /**
          * 初始化
          */
-        manager.init(this,paramsMap);     
+	 manager.init(this,paramsMap);   
+ 
 ```
 
 #### 设置MediationAdapterInterstitialListener
 ```java
 
       manager.setMediationAdapterInterstitialListener(new MediationAdapterInterstitialListener() {
-		 	 /**
-		     * 加载广告成功
-		     */
+      
+	    /**
+	     * 加载广告成功
+	     */
+	     
             @Override
             public void loadSucceed() {
                 Toast.makeText(InterstitialActivity.this,"loadSucceed",Toast.LENGTH_LONG).show();
             }
-           /**
-		     * 加载广告失败
-		     */
+	    
+            /**
+	     * 加载广告失败
+	     */
 
             @Override
             public void loadFailed(String msg) {
                 Toast.makeText(InterstitialActivity.this,"loadFailed:"+msg,Toast.LENGTH_LONG).show();
-           /**
-		     * 展示广告成功
-		     */
+	    }
+	    
+            /**
+	     * 展示广告成功
+	     */
 
             @Override
             public void showSucceed() {
                 Toast.makeText(InterstitialActivity.this,"showSucceed:",Toast.LENGTH_LONG).show();
             }
             
-		     /**
-		     * 展示广告失败
-		     */
+	     /**
+	     * 展示广告失败
+	     */
 
             @Override
             public void showFailed(String msg) {
                 Toast.makeText(InterstitialActivity.this,"showFailed:"+msg,Toast.LENGTH_LONG).show();
             }
+	    
             /**
-		     * 点击广告
-		     */
+	     * 点击广告
+	     */
 
             @Override
             public void clicked(String msg) {
                 Toast.makeText(InterstitialActivity.this,"clicked:"+msg,Toast.LENGTH_LONG).show();
             }
+	    
             /**
-		     * 关闭广告
-		     */
+	     * 关闭广告
+	     */
 
             @Override
             public void closed() {
@@ -467,7 +475,7 @@ ironsource要求需要调用该方法。
                  * @param 可置空
                  */
                  
- 				if (mediationInterstitialHandler != null) {
+ 		if (mediationInterstitialHandler != null) {
                     mediationInterstitialHandler.isReady("");
                 }
 ```
@@ -539,7 +547,7 @@ Map<String,Object> paramsMap = new HashMap<>();
         mtgAdSource.setTimeOut(20000);
         paramsMap.put("1",mtgAdSource);
 
- 	     /**
+ 	 /**
          * 初始化
          */ 
 		 manager.init(this,paramsMap);
@@ -550,58 +558,63 @@ Map<String,Object> paramsMap = new HashMap<>();
 ```java
 
     manager.setMediationAdapterRewardListener(new MediationAdapterRewardListener() {
-			 /**
-		     * 加载广告成功
-		     */
+	    /**
+	     * 加载广告成功
+	     */
 
             @Override
             public void loadSucceed() {
                 Toast.makeText(RewardActivity.this,"loadSucceed",Toast.LENGTH_LONG).show();
             }
 
-			   /**
-		     * 加载广告失败
-		     */
+	    /**
+	     * 加载广告失败
+	     */
 
             @Override
             public void loadFailed(String msg) {
                 Toast.makeText(RewardActivity.this,"loadFailed:"+msg,Toast.LENGTH_LONG).show();
             }
-             /**
-		     * 展示广告成功
-		     */
+	    
+            /**
+	     * 展示广告成功
+	     */
 
             @Override
             public void showSucceed() {
                 Toast.makeText(RewardActivity.this,"showSucceed:",Toast.LENGTH_LONG).show();
             }
+	    
             /**
-		     * 展示广告失败
-		     */
+	     * 展示广告失败
+	     */
 
             @Override
             public void showFailed(String msg) {
                 Toast.makeText(RewardActivity.this,"showFailed:"+msg,Toast.LENGTH_LONG).show();
             }
+	    
             /**
-		     * 点击广告
-		     */
+	     * 点击广告
+	     */
 
             @Override
             public void clicked(String msg) {
                 Toast.makeText(RewardActivity.this,"clicked:"+msg,Toast.LENGTH_LONG).show();
             }
+	    
              /**
-		     * 关闭广告
-		     */
+	      * 关闭广告
+	      */
 
             @Override
             public void closed() {
                 Toast.makeText(RewardActivity.this,"closed:",Toast.LENGTH_LONG).show();
             }
-             /**
-		     * 奖励回调
-		     */
+	    
+            /**
+	     * 奖励回调
+	     */
 
 
             @Override
