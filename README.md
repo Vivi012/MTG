@@ -427,7 +427,7 @@ ironsource要求需要调用该方法。
        
 ```java
 
-	@Override
+    @Override
     protected void onPause() {
         super.onPause();
         if(lifecycleListener != null){
@@ -488,14 +488,14 @@ ironsource要求需要调用该方法。
 #### 创建一个MediationRewardVideoHandler对象
 
 ```java
-  manager = new MediationRewardVideoHandler();
+  	manager = new MediationRewardVideoHandler();
 ```
 
 #### 设置MediationAdapterInitListener 
 需要在初始化前调用
 
 ```java
-      manager.setMediationAdapterInitListener(new MediationAdapterInitListener() {
+      	manager.setMediationAdapterInitListener(new MediationAdapterInitListener() {
            /**
            * 初始化成功
            */
@@ -523,7 +523,7 @@ ironsource要求需要调用该方法。
 示例代码：
 
 ```java
-Map<String,Object> paramsMap = new HashMap<>();
+	Map<String,Object> paramsMap = new HashMap<>();
         //IronSource
         AdSource adSource = new AdSource();
         Map<String,Object> ironsourceMap = new HashMap<>();
@@ -550,7 +550,7 @@ Map<String,Object> paramsMap = new HashMap<>();
  	 /**
          * 初始化
          */ 
-		 manager.init(this,paramsMap);
+	 manager.init(this,paramsMap);
 
 ```
 
@@ -627,13 +627,13 @@ Map<String,Object> paramsMap = new HashMap<>();
 ironsource要求需要调用该方法。
 
 ```java
-    lifecycleListener = manager.getLifecycleListener();
+   	 lifecycleListener = manager.getLifecycleListener();
 ```
 在Activity的生命周期中调用其中方法。     
        
 ```java
 
-	@Override
+    @Override
     protected void onPause() {
         super.onPause();
         if(lifecycleListener != null){
@@ -694,10 +694,11 @@ ironsource要求需要调用该方法。
 您可以重写BaseInterceptor，该拦截器的作用是设置SDK请求广告优先级，需要在init之前调用该方法。
 
 ```java
- 	 /**
+    /**
      * 设置拦截器，如果不设置或设置为null，将使用默认
      * @param interceptor
      */
+     
     public void setInterceptor(BaseInterceptor interceptor){
         if (interceptor != null) {
             mInterceptor = interceptor;
@@ -721,7 +722,7 @@ public class TestInterceptor extends BaseInterceptor {  
                 return linkedList; } 
         }
 
-       /**
+        /**
          * 初始化前调用
          */
         
