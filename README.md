@@ -10,7 +10,7 @@
 ## 配置Mintegral
 ### 获取账户信息  
 
-![点击](../Android Mediation EN.md)
+[点击](MTG/Android Mediation EN.md)
 
 **App Key**   
 
