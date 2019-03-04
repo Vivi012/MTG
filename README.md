@@ -8,7 +8,9 @@
  
 
 ## 配置Mintegral
-### 获取账户信息    
+### 获取账户信息  
+
+[点击](./Android Mediation EN.md)
 
 **App Key**   
 
