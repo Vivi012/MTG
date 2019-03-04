@@ -1,5 +1,6 @@
 
 # Mintegral聚合集成指南（Android）
+[英文文档](../README.md)
 
 ## 概要
 
@@ -13,17 +14,17 @@
 **App Key**   
 
 开发者每个账号都有对应的App Key，请求广告时需要用到该参数，它可以从Mintegral开发者后台获取，在**APP Setting -> App Key**界面，可以查看到该账号的App Key，如图所示：  
-![](https://github.com/Vivi012/MTG/blob/master/apikey.png?raw=true) 
+![](./apikey.png) 
 
 **App Id**        
 
 开发者每创建一个应用后，系统会自动生成App Id，可在**APP Setting -> App Id**界面查看到已创建的应用以及对应的App Id，如图所示：  
-![](https://github.com/Vivi012/MTG/blob/master/appid.png?raw=true)    
+![](./appid.png)    
 
 **Unit Id**       
 
 开发者每创建一个广告位后，系统会自动生成Unit Id，可在**APP Setting -> AD Unit -> AD Unit Id**界面查看到已创建的广告位以及对应的Unit Id，如图所示：  
-![](https://github.com/Vivi012/MTG/blob/master/unitid.png?raw=true)   
+![](./unitid.png)   
 
 ### 获取SDK
 
@@ -202,7 +203,7 @@ mintegral_mtgdownloads.aar<br>
 #### 创建App 
 要将您的应用程序添加到ironSource dashboard，请单击**New App** 按钮。
 
-![](https://github.com/Vivi012/MTG/blob/master/ir1.png?raw=true)
+![](./ir1.png)
 
 #### 进入应用详情
 
@@ -210,7 +211,7 @@ mintegral_mtgdownloads.aar<br>
 
 如果您的应用程序不可用，请选择 **App Not Live in the Application Store**并提供**Temporary Name**。选择Android平台，然后单击**Add App**。
 
-![](https://github.com/Vivi012/MTG/blob/master/ir2.png?raw=true)
+![](./ir2.png)
 
 ####  广告位配置
 记录下您添加应用后得到的**App Key**，初始化SDK时会用到此值。并在此处设置您所需要的广告形式状态，然后单击**Done**。
