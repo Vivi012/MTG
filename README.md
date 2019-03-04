@@ -13,7 +13,7 @@ Currently, we only support aggregation of ironSource's Rewarded Video and Inters
 
 **APP Key**   
 Each Mintegral account has a corresponding App Key, and the key will be needed for requesting ads. It can be retreived from your Mintegral account through the following path: **APP Setting -> App Key**:  
-![](https://github.com/Vivi012/MTG/blob/master/apikey.png?raw=true)
+![](./docs/apikey)
 
 **App ID**   
 The M-system will automatically generate a corresponding App ID for each app created by the developer. Find the App ID(s)  here: **APP Setting -> APP ID**:  
