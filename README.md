@@ -1,6 +1,6 @@
 
 # Mediation Integration Guide (Android)
-[Chinese document](./docs/index_cn.md)
+[Chinese Document](./docs/index_cn.md)
 
 ## Overview    
 
@@ -13,15 +13,15 @@ Currently, we only support aggregation of ironSource's Rewarded Video and Inters
 
 **APP Key**   
 Each Mintegral account has a corresponding App Key, and the key will be needed for requesting ads. It can be retreived from your Mintegral account through the following path: **APP Setting -> App Key**:  
-![](./docs/apikey)
+![](./docs/apikey.png)
 
 **App ID**   
 The M-system will automatically generate a corresponding App ID for each app created by the developer. Find the App ID(s)  here: **APP Setting -> APP ID**:  
-![](https://github.com/Vivi012/MTG/blob/master/appid.png?raw=true)
+![](./docs/appid.png)
 
 **Unit ID**  
 The M-system will automatically generate a corresponding Unit ID for each ad space created by the developer. Find the Unit ID here: **Login to M-system —> App Setting—>  Ad Unit —> Ad Unit ID** :  
-![](https://github.com/Vivi012/MTG/blob/master/unitid.png?raw=true)
+![](./docs/unitid.png)
 
 
 ###  Obtain the SDK
@@ -189,7 +189,7 @@ Add these codes "android:hardwareAccelerated=ture" in application tab：
 #### Create new app 
 To add your application to the ironSource dashboard, click the **New App** button.
 
-![](https://github.com/Vivi012/MTG/blob/master/ir1.png?raw=true)
+![](./docs/ir1.png)
 
 
 ### Enter app details
@@ -198,7 +198,7 @@ Select **Mobile App**, enter the **Google Play URL** of your app, and click **Im
 
 If your app is not available, select **App Not Live in the Application Store** and provide a **Temporary Name** for your app. Select Android as **platform** and click **Add App**.
 
-![](https://github.com/Vivi012/MTG/blob/master/ir2.png?raw=true)
+![](./docs/ir2.png)
 
 
 #### Unit Setting
@@ -266,7 +266,7 @@ implementation 'com.ironsource.sdk:mediationsdk:6.8.1@jar'
 
 
 ### Import Adapter 
-Click [here]()to get the mediation package and copy all the files to your project.
+Click [here](https://github.com/Mintegral-official/mediation-android/tree/master/mediation/src/main/java/com/mintegral/mediation)to get the mediation package and copy all the files to your project.
 
 
 ## Interstitial
