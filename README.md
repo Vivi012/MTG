@@ -10,8 +10,6 @@
 ## 配置Mintegral
 ### 获取账户信息  
 
-[点击](./Android_Mediation_EN.md)
-
 **App Key**   
 
 开发者每个账号都有对应的App Key，请求广告时需要用到该参数，它可以从Mintegral开发者后台获取，在**APP Setting -> App Key**界面，可以查看到该账号的App Key，如图所示：  
@@ -221,7 +219,7 @@ mintegral_mtgdownloads.aar<br>
 
 ###  集成ironsource
 
-[ironsource集成文档]()参考链接。
+[ironsource集成文档](https://developers.ironsrc.com/ironsource-mobile/android/android-sdk/)参考链接。
 
 #### 导入ironsource文件
 
@@ -284,7 +282,7 @@ dependencies {
 
 
 ### 导入Adapter文件
-点击[这里]()中获取Mediation包，并将其中的全部文档拷贝到您的项目中。
+点击[这里](https://github.com/Mintegral-official/mediation-android/tree/master/mediation/src/main/java/com/mintegral/mediation)中获取Mediation包，并将其中的全部文档拷贝到您的项目中。
 
 ## Interstitial接入
 ###  初始化
