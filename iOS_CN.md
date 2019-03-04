@@ -1,6 +1,8 @@
 
 # Mintegral聚合集成指南（iOS）
 
+[英文文档](../README.md)
+
 ## 概要
 
     
@@ -12,15 +14,15 @@
 
 **App Key**   
 登录Mintegral开发者后台，在**APP Setting -> APP Key**界面，可以查看到该账号的APP Key，如图所示：<br/><br/>
-![](https://github.com/Vivi012/MTG/blob/master/apikey.png?raw=true) 
+![](./apikey.png) 
 
 **APP ID**   
 开发者每创建一个应用后，系统会自动生成App ID，可在**APP Setting -> APP ID**界面查看到已创建的应用以及对应的App ID，如图所示：<br/><br/>
-![](https://github.com/Vivi012/MTG/blob/master/appid.png?raw=true) 
+![](./appid.png) 
 
  **Unit ID**
 开发者每创建一个广告位后，系统会自动生成Unit ID，可在**APP Setting -> AD Unit -> AD Unit ID**界面查看到已创建的广告位以及对应的Unit ID，如图所示： <br/><br/>
-![](https://github.com/Vivi012/MTG/blob/master/unitid.png?raw=true)  
+![](./unitid.png)  
 
 ### 获取SDK
 
@@ -70,7 +72,7 @@ WebKit.framework<br/>
 #### 创建App 
 要将您的应用程序添加到ironSource dashboard，请单击 **New App** 按钮。
 
-![](https://github.com/Vivi012/MTG/blob/master/ir1.png?raw=true)
+![](./ir1.png)
 
 #### 进入应用详情
 
@@ -78,7 +80,7 @@ WebKit.framework<br/>
 
 如果您的应用程序不可用，请选择 **App Not Live in the Application Store**并提供**Temporary Name**。选择iOS平台，然后单击**Add App**。
 
-![](https://github.com/Vivi012/MTG/blob/master/ir2.png?raw=true)
+![](./ir2.png)
 
 
 #### 广告位配置
@@ -116,7 +118,7 @@ ironSource SDK集成同时支持 Cocoapods 和手动下载两种途径：
 
 
 ### 导入Adapter文件
-点击[这里]()中获取Mediation及Network包，并将其中的全部文档拷贝到您的项目中。
+点击[这里](https://github.com/Mintegral-official/mediation-iOS/tree/master/MTGMediationSample/MTGMediationSample)中获取Mediation及Network包，并将其中的全部文档拷贝到您的项目中。
 
 ## Interstitial接入
 ### 导入头文件
@@ -129,7 +131,7 @@ ironSource SDK集成同时支持 Cocoapods 和手动下载两种途径：
 这里除了创建plist文件的形式，您还可以在MTGAdInfo中设定参数。
           
 
-![](https://github.com/Vivi012/MTG/blob/master/iOSplist.png?raw=true)
+![](./iOSplist.png)
 
 示例代码：        
 
@@ -248,7 +250,7 @@ MTGInterstitialAdManager *interstitialManager = [[MTGInterstitialAdManager alloc
 请求广告时需要传入对应广告的adUnitID。创建plist文件，按照下图传入您的广告Id，Adapter类名（classname）等参数，其中Mintegral network需要传入您在Mintegral后台申请的appid、appkey、unitid；ironsource需要传入您在ironsource后台申请的appkey。**Item 0的network为优先请求的广告。**       
 这里除了创建plist文件的形式，您还可以在MTGAdInfo中设定参数。                         
 
-![](https://github.com/Vivi012/MTG/blob/master/iOSRVPlist.png?raw=true)
+![](./iOSRVPlist.png)
 
 #### 注册MTGRewardVideoDelegate代理
 ```java
