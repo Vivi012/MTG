@@ -13,15 +13,15 @@ Currently, we only support aggregation of ironSource's Rewarded Video and Inters
 
 **App Key**      
 Each Mintegral account has a corresponding App Key, and the key will be needed for requesting ads. It can be retreived from your Mintegral account through the following path: **APP Setting -> App Key**:  
-![](./docs/ApiKey.png)     
+![](./docs/apikey.png)     
 
 **App ID**      
 The M-system will automatically generate a corresponding App ID for each app created by the developer. Find the App ID(s)  here: **APP Setting -> APP ID**:        
-![](./docs/AppId.png)   
+![](./docs/appid.png)   
 
 **Unit ID**    
 The M-system will automatically generate a corresponding Unit ID for each ad space created by the developer. Find the Unit ID here: **Login to M-system —> App Setting—> Ad Unit —> Ad Unit ID:**   
-![](./docs/UnitId.png)  
+![](./docs/unitid.png)  
 
 ### Obtain the SDK
 
