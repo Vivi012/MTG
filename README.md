@@ -1,5 +1,6 @@
 
 # Mediation Integration Guide (Android)
+[Chinese document](./docs/index_cn.md)
 
 ## Overview    
 
