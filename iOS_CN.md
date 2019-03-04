@@ -85,10 +85,6 @@ WebKit.framework<br/>
 记录下您添加应用后得到的**App Key**，初始化SDK时会用到此值。并在此处设置您所需要的广告形式状态，然后单击**Done**。    
 ![](https://developers.google.com/admob/images/mediation/ironsource/ad_format_select_ios.png)
 
-
-
-
-
 ### 集成ironsource
 请仔细阅读[ironsource iOS 集成文档](https://developers.ironsrc.com/ironsource-mobile/ios/getting-started-ironsource-ios-sdk-chinese/#step-1)     
 
@@ -133,7 +129,7 @@ ironSource SDK集成同时支持 Cocoapods 和手动下载两种途径：
 这里除了创建plist文件的形式，您还可以在MTGAdInfo中设定参数。
           
 
-![](./iOSplist.png)
+![](https://github.com/Vivi012/MTG/blob/master/iOSplist.png?raw=true)
 
 示例代码：        
 
@@ -252,7 +248,7 @@ MTGInterstitialAdManager *interstitialManager = [[MTGInterstitialAdManager alloc
 请求广告时需要传入对应广告的adUnitID。创建plist文件，按照下图传入您的广告Id，Adapter类名（classname）等参数，其中Mintegral network需要传入您在Mintegral后台申请的appid、appkey、unitid；ironsource需要传入您在ironsource后台申请的appkey。**Item 0的network为优先请求的广告。**       
 这里除了创建plist文件的形式，您还可以在MTGAdInfo中设定参数。                         
 
-![](./iOSRVPlist.png)
+![](https://github.com/Vivi012/MTG/blob/master/iOSRVPlist.png?raw=true)
 
 #### 注册MTGRewardVideoDelegate代理
 ```java
