@@ -61,7 +61,7 @@ or jar with their res file.
 
 ###  AndroidManifest.xml Configuration
 
-1. Required permission 
+1.Required permission 
 
 **If you imported the  SDK for China-mainland , then you are required to get permission for the term "READ_PHONE_STATE". If your Android system is version 6.0 or above, you need to apply for the permission in your java code.**     
 
@@ -281,18 +281,20 @@ The below needs to be called before initialization.
 
 ```java
       manager.setMediationAdapterInitListener(new MediationAdapterInitListener() {
-     /**
-     * Called after the interstitial init success
-     */
+      
+	    /**
+	     * Called after the interstitial init success
+	     */
+	     
             @Override
             public void onInitSucceed() {
                 Toast.makeText(InterstitialActivity.this,"onInitSucceed",Toast.LENGTH_LONG).show();
                 Log.e("interstitial","onInitSucceed");
             }
             
-     /**
-     * Called after the interstitial init failed
-     */
+	    /**
+	     * Called after the interstitial init failed
+	     */
 
             @Override
             public void onInitFailed() {
@@ -309,13 +311,13 @@ You should configure parameters such as ad ID, adapter absolute path and timeout
 Sample code:
 
 ```java
-		 /**
+	/**
          * @param setTargetClass,There need fill adapter path.		
          * @param TimeOut,load ad timeout
          * @param ("1",mtgAdSource),Set the priority of the ads,"1" is the first call, and the default priority is to request the MTG ads. 
          */
 
-		Map<String,Object> paramsMap = new HashMap<>();
+	Map<String,Object> paramsMap = new HashMap<>();
         //IronSource
         AdSource adSource = new AdSource();
         Map<String,Object> ironsourceMap = new HashMap<>();
@@ -324,7 +326,7 @@ Sample code:
         adSource.setTargetClass("com.mintegral.mediation.adapter.iron.IronInterstitialAdapter");     
 		adSource.setTimeOut(10000);
 		paramsMap.put("2",adSource);
-        //MTG
+        //Mintegral
         Map<String,Object> map = new HashMap<>();
         AdSource mtgAdSource = new AdSource();
         map.put(CommonConst.KEY_APPID, "your AppId");
@@ -336,58 +338,64 @@ Sample code:
         mtgAdSource.setTimeOut(10000);
         paramsMap.put("1",mtgAdSource);
 
- 	     /**
+        /**
          * init Interstitial
          */        
-		manager.init(this,paramsMap);
+	manager.init(this,paramsMap);
 
 ```
 
 #### Set MediationAdapterInterstitialListener
 ```java
 manager.setMediationAdapterInterstitialListener(new MediationAdapterInterstitialListener() {
-		 	 /**
-		     * invoked when there is an interstitial has been loaded.
-		     */
+
+	    /**
+	     * invoked when there is an interstitial has been loaded.
+	     */
+	     
             @Override
             public void loadSucceed() {
                 Toast.makeText(InterstitialActivity.this,"loadSucceed",Toast.LENGTH_LONG).show();
             }
-           /**
-		     * invoked when there is no Interstitial Ad available after calling load function.
-		     */
+	    
+            /**
+	     * invoked when there is no Interstitial Ad available after calling load function.
+	     */
 
             @Override
             public void loadFailed(String msg) {
                 Toast.makeText(InterstitialActivity.this,"loadFailed:"+msg,Toast.LENGTH_LONG).show();
-           /**
-		     *  Invoked when the ad was opened and shown successfully.
-		     */
+		
+            /**
+	     *  Invoked when the ad was opened and shown successfully.
+	     */
 
             @Override
             public void showSucceed() {
                 Toast.makeText(InterstitialActivity.this,"showSucceed:",Toast.LENGTH_LONG).show();
             }
             
-		     /**
-		     * Invoked when Interstitial ad failed to show. the msg which represents the reason of showInterstitial failure.
-		     */
+	     /**
+	     * Invoked when Interstitial ad failed to show. the msg which represents the reason of showInterstitial failure.
+	     */
 
             @Override
             public void showFailed(String msg) {
                 Toast.makeText(InterstitialActivity.this,"showFailed:"+msg,Toast.LENGTH_LONG).show();
             }
+	    
             /**
-		     * Invoked when the end user clicked on the interstitial ad.
-		     */
+	     * Invoked when the end user clicked on the interstitial ad.
+	     */
 
             @Override
             public void clicked(String msg) {
                 Toast.makeText(InterstitialActivity.this,"clicked:"+msg,Toast.LENGTH_LONG).show();
             }
+	    
             /**
-		     *  Invoked when the ad is closed and the user is about to return to the application.
-		     */
+	     *  Invoked when the ad is closed and the user is about to return to the application.
+	     */
 
             @Override
             public void closed() {
@@ -407,7 +415,7 @@ You can call these methods during Activity's lifecycle.
        
 ```java
 
-	@Override
+    @Override
     protected void onPause() {
         super.onPause();
         if(lifecycleListener != null){
@@ -460,9 +468,11 @@ The below needs to be called before initialization.
 
 ```java
       manager.setMediationAdapterInitListener(new MediationAdapterInitListener() {
-     /**
-     * Called after the interstitial init success
-     */
+      
+	/**
+	 * Called after the interstitial init success
+	 */
+		
             @Override
             public void onInitSucceed() {
                 Toast.makeText(InterstitialActivity.this,"onInitSucceed",Toast.LENGTH_LONG).show();
@@ -470,8 +480,8 @@ The below needs to be called before initialization.
             }
             
      /**
-     * Called after the interstitial init failed
-     */
+      * Called after the interstitial init failed
+      */
 
             @Override
             public void onInitFailed() {
@@ -490,13 +500,13 @@ You should configure parameters such as ad ID, adapter absolute path and timeout
 Sample code:
 
 ```java
-		/**
+	/**
          * @param setTargetClass,There need fill adapter path.		
          * @param TimeOut,load ad timeout
          * @param ("1",mtgAdSource),Set the priority of the ads,"1" is the first call, and the default priority is to request the MTG ads. 
          */
 
-		Map<String,Object> paramsMap = new HashMap<>();
+	Map<String,Object> paramsMap = new HashMap<>();
         //IronSource
         AdSource adSource = new AdSource();
         Map<String,Object> ironsourceMap = new HashMap<>();
@@ -505,6 +515,7 @@ Sample code:
         adSource.setTargetClass("com.mintegral.mediation.adapter.iron.IronRewardAdapter");        
         adSource.setTimeOut(10000);
         paramsMap.put("2",adSource);
+	
         //Mintegral
         Map<String,Object> map = new HashMap<>();
         AdSource mtgAdSource = new AdSource();
@@ -520,11 +531,11 @@ Sample code:
         mtgAdSource.setTimeOut(20000);
         paramsMap.put("1",mtgAdSource);
         
- 	     /**
+        /**
          * init RewaredVideo
          */        
         
-		manager.init(this,paramsMap);
+	manager.init(this,paramsMap);
 
 ```
 
@@ -532,58 +543,63 @@ Sample code:
 ### Set MediationAdapterRewardListener
 ```java
 manager.setMediationAdapterRewardListener(new MediationAdapterRewardListener() {
-			 /**
-		     * Invoked when there is an interstitial has been loaded.	
-		     */
+	    /**
+	     * Invoked when there is an interstitial has been loaded.	
+	     */
 
             @Override
             public void loadSucceed() {
                 Toast.makeText(RewardActivity.this,"loadSucceed",Toast.LENGTH_LONG).show();
             }
 
-			  /**
-		     * Invoked when there is no Interstitial Ad available after calling load function.
-		     */
+            /**
+	     * Invoked when there is no Interstitial Ad available after calling load function.
+	     */
 
             @Override
             public void loadFailed(String msg) {
                 Toast.makeText(RewardActivity.this,"loadFailed:"+msg,Toast.LENGTH_LONG).show();
             }
-             /**
-			 * Invoked when the ad was opened and shown successfully.
-		     */
+	    
+            /**
+	     * Invoked when the ad was opened and shown successfully.
+	     */
 
             @Override
             public void showSucceed() {
                 Toast.makeText(RewardActivity.this,"showSucceed:",Toast.LENGTH_LONG).show();
             }
+	    
             /**
-		     * Invoked when Interstitial ad failed to show. the msg which represents the reason of showInterstitial failure.
-		     */
+	     * Invoked when Interstitial ad failed to show. the msg which represents the reason of showInterstitial failure.
+	     */
 
             @Override
             public void showFailed(String msg) {
                 Toast.makeText(RewardActivity.this,"showFailed:"+msg,Toast.LENGTH_LONG).show();
             }
+	    
             /**
-		     * Invoked when the end user clicked on the interstitial ad.
-		     */
+	     * Invoked when the end user clicked on the interstitial ad.
+	     */
 
             @Override
             public void clicked(String msg) {
                 Toast.makeText(RewardActivity.this,"clicked:"+msg,Toast.LENGTH_LONG).show();
             }
-             /**
-		     * Invoked when the ad is closed and the user is about to return to the application.
-		     */
+	    
+            /**
+	     * Invoked when the ad is closed and the user is about to return to the application.
+	     */
 
             @Override
             public void closed() {
                 Toast.makeText(RewardActivity.this,"closed:",Toast.LENGTH_LONG).show();
             }
-             /**
-		     * Invoked when the user completed the video and should be rewarded.
-		     */
+	    
+            /**
+	     * Invoked when the user completed the video and should be rewarded.
+	     */
 
 
             @Override
@@ -602,7 +618,7 @@ You can called these methods in the Activity's lifecycle
        
 ```java
 
-	@Override
+    @Override
     protected void onPause() {
         super.onPause();
         if(lifecycleListener != null){
@@ -649,10 +665,11 @@ manager.isReady();
 You can override the BaseInterceptor class, this interceptor is used to set up the SDK for requesting ad priority, which needs to be called before initialization.
 
 ```java
- 	 /**
+    /**
      * Set the interceptor, if not set or set to null, the default will be used our DefaultRewardInterceptor.
      * @param interceptor
      */
+     
     public void setInterceptor(BaseInterceptor interceptor){
         if (interceptor != null) {
             mInterceptor = interceptor;
