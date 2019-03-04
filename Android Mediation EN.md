@@ -12,15 +12,15 @@ Currently, we only support aggregation of ironSource's Rewarded Video and Inters
 
 **APP Key**   
 Each Mintegral account has a corresponding App Key, and the key will be needed for requesting ads. It can be retreived from your Mintegral account through the following path: **APP Setting -> App Key**:  
-![](./ApiKey.png) 
+![](https://github.com/Vivi012/MTG/blob/master/apikey.png?raw=true)
 
 **App ID**   
 The M-system will automatically generate a corresponding App ID for each app created by the developer. Find the App ID(s)  here: **APP Setting -> APP ID**:  
-![](./AppId.png)
+![](https://github.com/Vivi012/MTG/blob/master/appid.png?raw=true)
 
 **Unit ID**  
 The M-system will automatically generate a corresponding Unit ID for each ad space created by the developer. Find the Unit ID here: **Login to M-system —> App Setting—>  Ad Unit —> Ad Unit ID** :  
-![](./UnitId.png)
+![](https://github.com/Vivi012/MTG/blob/master/unitid.png?raw=true)
 
 
 ###  Obtain the SDK
@@ -33,7 +33,7 @@ The M-system will automatically generate a corresponding Unit ID for each ad spa
 
 **Integrate via JAR/AAR package**
 
-####Required Files for Interstitial 
+#### Required Files for Interstitial 
 mintegral_alphab.aar<br>
 mintegral_common.aar/mintegral_chinacommon.aar<br>
 mintegral_intersitialvideo.aar<br>
@@ -45,7 +45,7 @@ mintegral_mtgjscommon.aar<br>
 mintegral_mtgdownloads.aar<br>
 or jar with their res file.
 
-####Required Files for Rewarded Video
+#### Required Files for Rewarded Video
 
 mintegral_alphab.aar<br>
 mintegral_common.aar/mintegral_chinacommon.aar<br>
@@ -86,11 +86,11 @@ or jar with their res file.
 
 ```xml
     <activity
-        android:name="com.mintegral.msdk.activity.MTGCommonActivity"
-        android:configChanges="keyboard|orientation"
-        android:screenOrientation="portrait"
-        android:exported="true"
-        android:theme="@android:style/Theme.Translucent.NoTitleBar">
+	android:name="com.mintegral.msdk.activity.MTGCommonActivity"
+	android:configChanges="keyboard|orientation"
+	android:screenOrientation="portrait"
+	android:exported="true"
+	android:theme="@android:style/Theme.Translucent.NoTitleBar">
     </activity>
     
         <activity
@@ -181,14 +181,15 @@ Add these codes "android:hardwareAccelerated=ture" in application tab：
 
 
 
-**##ironSource Settings**
+## ironSource Settings
 
 ### Create your account
-####[Sign up](https://platform.ironsrc.com/partners/signup)and[sign in](https://platform.ironsrc.com/partners/tour)to your ironSource account.     
-####Create new app 
+#### [Sign up](https://platform.ironsrc.com/partners/signup)and[sign in](https://platform.ironsrc.com/partners/tour)to your ironSource account.     
+#### Create new app 
 To add your application to the ironSource dashboard, click the **New App** button.
 
-![](./ir1.png)
+![](https://github.com/Vivi012/MTG/blob/master/ir1.png?raw=true)
+
 
 ### Enter app details
 
@@ -196,13 +197,14 @@ Select **Mobile App**, enter the **Google Play URL** of your app, and click **Im
 
 If your app is not available, select **App Not Live in the Application Store** and provide a **Temporary Name** for your app. Select Android as **platform** and click **Add App**.
 
-![](./ir2.png)
+![](https://github.com/Vivi012/MTG/blob/master/ir2.png?raw=true)
 
-####Unit Setting
+
+#### Unit Setting
 Take note of your new **App Key**, This value will be used when loading ads. Select the ad formats your app supports in the appropriate tabs. Then click **Done**.
 ![](https://developers.google.com/admob/images/mediation/ironsource/ad_format_select_android.png)
 
-###Integrating ironSource 
+### Integrating ironSource 
 reference link: [ironsource Integration Guide](https://developers.ironsrc.com/ironsource-mobile/android/android-sdk/)
 
 #### Import ironSource SDK
@@ -268,9 +270,9 @@ Click [here]()to get the mediation package and copy all the files to your projec
 
 ## Interstitial
 
-###Init Interstitial
+### Init Interstitial
 
-####Create MediationInterstitialHandler
+#### Create MediationInterstitialHandler
 ```java
 manager = new MediationInterstitialHandler();
 ```
@@ -300,7 +302,7 @@ The below needs to be called before initialization.
         });
 ```
 
-####Call init method 
+#### Call init method 
 
 You should configure parameters such as ad ID, adapter absolute path and timeout sesion in Map when initializing.       
 
@@ -341,7 +343,7 @@ Sample code:
 
 ```
 
-####Set MediationAdapterInterstitialListener
+#### Set MediationAdapterInterstitialListener
 ```java
 manager.setMediationAdapterInterstitialListener(new MediationAdapterInterstitialListener() {
 		 	 /**
@@ -446,9 +448,9 @@ manager.isReady();
 
 
 
-##Rewarded Video
+## Rewarded Video
 
-###Init RewardedVideo
+### Init RewardedVideo
 #### Create a MediationRewardVideoHandler
 ```java
 manager = new MediationRewardVideoHandler();
@@ -481,7 +483,7 @@ The below needs to be called before initialization.
 
 
 
-####Call the init method
+#### Call the init method
 
 You should configure parameters such as ad ID, adapter absolute path and timeout sesion in Map when initializing.   
 
@@ -527,7 +529,7 @@ Sample code:
 ```
 
 
-###Set MediationAdapterRewardListener
+### Set MediationAdapterRewardListener
 ```java
 manager.setMediationAdapterRewardListener(new MediationAdapterRewardListener() {
 			 /**
